@@ -1,3 +1,4 @@
+'use strict'
 var ui = {
     messageDiv: document.getElementById("message"),
     debugDiv: document.getElementById("debug"),
@@ -14,5 +15,20 @@ var ui = {
 
     debug: function(message) {
         this.debugDiv.innerHTML=`<pre>${JSON.stringify(message, null, 2)}</pre>`;
+    },
+    addSecretWordToDisplay: function(){
+        game.lettersInSecretWord.forEach(function(letter) {
+            var div = document.createElement('div');
+            div.dataset.letter = letter;
+            div.classList = "letter";
+            div.innerHTML = "_";
+            ui.secretWordDiv.appendChild(div);
+        });
+    },
+    start: function(){
+        this.addSecretWordToDisplay();
+        this.msg("Let the Game Begin");
+        this.debug(game);
     }
 }
+
