@@ -6,7 +6,7 @@ var game = {
     lose: 0,
     guesses: 6,
 
-    updateAnwser: function () {
+    updateAnswer: function () {
         this.secretWord = this.dictionary[Math.floor(Math.random() * this.dictionary.length)];
       },
     
@@ -18,7 +18,7 @@ var game = {
 
     start: function() {
         lettersYouveGuessed=[],
-        this.updateAnwser(),
+        this.updateAnswer(),
         this.getLettersInSecretWord(),
         this.guesses = 6
     }
