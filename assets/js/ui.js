@@ -1,6 +1,6 @@
 var ui = {
     messageDiv: document.getElementById("message"),
-    debug: document.getElementById("debug"),
+    debugDiv: document.getElementById("debug"),
     secretWordDiv: document.getElementById("secretWord"),
     hangcatDiv: document.getElementById("hangcat"),
     alphabetDiv: document.getElementById("alphabet"),
