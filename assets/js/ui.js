@@ -10,5 +10,9 @@ var ui = {
 
     msg: function(message) {
         this.messageDiv.innerHTML=message;
+    },
+
+    debug: function(message) {
+        this.debugDiv.innerHTML=`<pre>${JSON.stringify(message, null, 2)}</pre>`;
     }
 }
